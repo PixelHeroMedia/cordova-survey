@@ -21,7 +21,7 @@ App.Stage2Route = Ember.Route.extend({
     model: function () {
         return this.store.find('survey');
     },
-    setupController: function (controller, model) {
+    setupController: function (controller) {
         controller.set('location', userLocation);
         controller.set('dt', new Date().today() + " " + new Date().timeNow());
     }

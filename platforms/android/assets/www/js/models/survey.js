@@ -80,7 +80,7 @@ App.Stage3Controller = Ember.Controller.extend({
                 data.feedback = survey.get('feedback');
 
                 // if no network coverage save to device
-                if (navigator.connection.type === Connection.UNKNOWN || Connection.NONE) {
+                if (navigator.connection.type === Connection.UNKNOWN || navigator.connection.type === Connection.NONE) {
                     fEntry.createWriter(gotFileWriter, errorHandler);
                     gWriter.write(JSON.stringify(data));
                 } else {

@@ -5623,7 +5623,9 @@ img {
   display: block; }
 
 body {
-  position: relative;
+  position: relative; }
+
+form {
   margin: 20px; }
 
 h1 {
@@ -5638,5 +5640,15 @@ p {
 
 .label {
   font-size: 100%; }
+
+.steps {
+  background: #264351;
+  display: block;
+  line-height: 40px;
+  height: 40px;
+  margin-bottom: 20px; }
+
+.pad {
+  padding: 0 20px; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/ember.animate.css" />
+        <title>Mubaloo Survey</title>
+    </head>
+    <body>
+        <div class="app">
+			<script type="text/x-handlebars">
+				<img src="img/logo.png" alt="Survey" />
+				<h1>Survey Form</h1>
+
+				{{animated-outlet name="main"}}
+			</script>
+            <script type="text/x-handlebars" data-template-name="stage1">  
+				<form {{action "toStage2" on="submit"}} id="form1">
+					<div class="form-group">
+					<label for="title">Title</label>
+					{{view "select" content=titles value=title id="title" prompt="Please select a title" class="form-control"}}
+					</div>
+					{{form-field
+					  type="text"
+					  label="fname"
+					  placeholder="First name"
+					  value=fname}}
+					{{form-field
+					  type="text"
+					  label="lname"
+					  placeholder="Last name"
+					  value=lname}}					  
+					{{form-field
+					  type="date"
+					  label="dob"
+					  placeholder="Date of birth"
+					  value=dob}}
+					  <button class="btn btn-default">Next Stage</button>
+				</form>
+			</script>
+            <script type="text/x-handlebars" data-template-name="stage2">
+				<form {{action "toStage3" on="submit"}} id="form2">
+					{{form-field
+					  type="text"
+					  label="location"
+					  placeholder="Location"
+					  value=location}}
+					{{form-field
+					  type="text"
+					  label="dr"
+					  placeholder="Date/Time"
+					  value=dt}}
+					<button class="btn btn-default">Next Stage &gt;</button>
+				</form>
+			</script>
+            <script type="text/x-handlebars" data-template-name="stage3">
+				<form {{action "submitSurvey" on="submit"}} id="form3">
+				{{form-field
+					  type="textarea"
+					  label="feedback"
+					  placeholder="Any Feedback?"
+					  value=feedback}}
+					<button class="btn btn-default">Submit</button>
+				</form>
+			</script>
+			<script type="text/x-handlebars" data-template-name="stage4">
+				<p>:) Thank you for submiting your survey :)</p>
+			</script>
+			
+			<script type="text/x-handlebars" data-template-name="components/form-field">
+			  <div class="form-group">
+			  <label {{bind-attr for=label}}>{{placeholder}}</label>
+				{{input type=type placeholder=placeholder value=value id=label class="form-control"}}
+			  </div>
+			</script>
+
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+		<script src="js/libs/jquery-1.10.2.js"></script>
+		<script src="js/libs/handlebars-v2.0.0.js"></script>
+		<script src="js/libs/ember-1.9.1.js"></script>
+		<script src="js/libs/ember-data.js"></script>
+		<script src="js/ember.animate.js"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAp-DpSgFLPA66_arCZ4NJsGU68-GFUhjs"></script>
+		<script src="js/app.js"></script>
+        <script src="js/models/survey.js"></script>
+    </body>
+</html>

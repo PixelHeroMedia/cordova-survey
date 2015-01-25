@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.example.survey" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Survey</name>
+    <description>
+        Survey App for Mubaloo
+    </description>
+    <author email="r.edwards@pixelhero.co.uk">
+        Richard Edwards
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+	
+	<platform name="android">
+		<icon src="res/ldpi.png" density="ldpi" />
+		<icon src="res/mdpi.png" density="mdpi" />
+		<icon src="res/hdpi.png" density="hdpi" />
+		<icon src="res/xhdpi.png" density="xhdpi" />
+		<splash src="res/v-hdpi.png" density="land-hdpi"/>
+		<splash src="res/v-ldpi.png" density="land-ldpi"/>
+		<splash src="res/v-mdpi.png" density="land-mdpi"/>
+		<splash src="res/v-xhdpi.png" density="land-xhdpi"/>
+		<splash src="res/h-hdpi.png" density="port-hdpi"/>
+		<splash src="res/h-ldpi.png" density="port-ldpi"/>
+		<splash src="res/h-mdpi.png" density="port-mdpi"/>
+		<splash src="res/h-xhdpi.png" density="port-xhdpi"/>
+	</platform>   
+	<preference name="SplashScreen" value="screen" />
+	<preference name="SplashScreenDelay" value="5000" />
+</widget>            
+                     

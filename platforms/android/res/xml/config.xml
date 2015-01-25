@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.example.survey" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <preference name="loglevel" value="DEBUG" />
+    <feature name="NetworkStatus">
+        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
+    </feature>
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+    </feature>
+    <feature name="Vibration">
+        <param name="android-package" value="org.apache.cordova.vibration.Vibration" />
+    </feature>
+    <feature name="FileTransfer">
+        <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
+    </feature>
+    <icon density="ldpi" src="res/ldpi.png" />
+    <icon density="mdpi" src="res/mdpi.png" />
+    <icon density="hdpi" src="res/hdpi.png" />
+    <icon density="xhdpi" src="res/xhdpi.png" />
+    <splash density="land-hdpi" src="res/v-hdpi.png" />
+    <splash density="land-ldpi" src="res/v-ldpi.png" />
+    <splash density="land-mdpi" src="res/v-mdpi.png" />
+    <splash density="land-xhdpi" src="res/v-xhdpi.png" />
+    <splash density="port-hdpi" src="res/h-hdpi.png" />
+    <splash density="port-ldpi" src="res/h-ldpi.png" />
+    <splash density="port-mdpi" src="res/h-mdpi.png" />
+    <splash density="port-xhdpi" src="res/h-xhdpi.png" />
+    <name>Survey</name>
+    <description>
+        Survey App for Mubaloo
+    </description>
+    <author email="r.edwards@pixelhero.co.uk">
+        Richard Edwards
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="5000" />
+</widget>
